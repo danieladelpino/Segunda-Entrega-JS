@@ -1,4 +1,4 @@
-// Definir la clase Auto
+
 class Auto {
   constructor(marca, modelo, precio, disponible) {
     this.marca = marca;
@@ -8,7 +8,7 @@ class Auto {
   }
 }
 
-// Crear un array de autos disponibles para rentar
+
 const autosDisponibles = [];
 
 const auto1 = new Auto("Toyota", "Corolla", 20000, true);
@@ -18,13 +18,12 @@ const auto4 = new Auto("Chevrolet", "Camaro", 30000, true);
 
 autosDisponibles.push(auto1, auto2, auto3, auto4)
 
-// Aplicar un filtro para obtener los autos disponibles para rentar
+
 const obtenerAutosDisponibles = (autos) => {
   return autos.filter((auto) => auto.disponible);
 };
 
 
-// Guardamos los autos disponibles para rentar
 const autosDisponiblesParaRenta = obtenerAutosDisponibles(autosDisponibles);
 console.log("Autos disponibles para renta:");
 autosDisponiblesParaRenta.forEach((auto, index) => {
@@ -37,7 +36,7 @@ autosDisponiblesParaRenta.forEach((auto, index) => {
 });
 
 
-// Aplicar una función de orden superior para calcular el costo total de renta de los autos
+
 const calcularCostoTotalRenta = (autos, dias) => {
   const autosSeleccionados = obtenerAutosDisponibles(autos);
   const precios = autosSeleccionados.map((auto) => auto.precio);
