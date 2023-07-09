@@ -27,7 +27,9 @@ const obtenerAutosDisponibles = (autos) => {
 // Guardamos los autos disponibles para rentar
 const autosDisponiblesParaRenta = obtenerAutosDisponibles(autosDisponibles);
 console.log("Autos disponibles para renta:");
-autosDisponiblesParaRenta.forEach((auto) => {
+autosDisponiblesParaRenta.forEach((auto, index) => {
+  const numAuto = index + 1;
+  console.log(numAuto);
   console.log("Modelo: " + auto.modelo);
   console.log("Marca: " + auto.marca);
   console.log("Precio: " + auto.precio);
@@ -46,7 +48,7 @@ const calcularCostoTotalRenta = (autos, dias) => {
 const eleccion = Number(prompt("Seleccione el número correspondiente al auto que desea rentar:"));
 
 if (eleccion >= 1 && eleccion <= autosDisponiblesParaRenta.length) {
-  const autoElegido = autosDisponiblesParaRenta[eleccion - 1];
+  const autoElegido = autosDisponiblesParaRenta[eleccion];
 
   const dias = Number(prompt("Ingrese la cantidad de días de renta:"));
 
