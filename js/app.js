@@ -47,7 +47,7 @@ const calcularCostoTotalRenta = (autos, dias) => {
 const eleccion = Number(prompt("Seleccione el número correspondiente al auto que desea rentar:"));
 
 if (eleccion >= 1 && eleccion <= autosDisponiblesParaRenta.length) {
-  const autoElegido = autosDisponiblesParaRenta[eleccion];
+  const autoElegido = autosDisponiblesParaRenta[eleccion - 1];
 
   const dias = Number(prompt("Ingrese la cantidad de días de renta:"));
 
